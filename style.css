@@ -1,0 +1,127 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  display: flex;
+  align-items: center;
+  background-color: #000000;
+  justify-content: center;
+  height: 100vh;
+}
+.container {
+  width: 450px;
+  background-color: rgb(8, 8, 8);
+  height: 500px;
+  /* box-shadow: 0 0 5px #fff; */
+  border-radius: 15px;
+}
+ul {
+  list-style-type: none;
+}
+.result {
+  height: 50px;
+}
+.result,
+.operation {
+  color: #fff;
+  padding: 20px 20px 0 20px;
+  width: 100%;
+  text-align: right;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2rem;
+}
+.operation {
+  font-size: 1rem;
+  height: 30px;
+}
+.down {
+  position: absolute;
+  left: 50%;
+  bottom: 71%;
+  z-index: 999;
+  transform: translateX(-50%);
+  background-color: #fff;
+  border-radius: 50px;
+  width: 80px;
+  height: 4px;
+  cursor: pointer;
+}
+.skeleton {
+  font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+  padding: 50px 20px 50px 20px;
+  width: 100%;
+  display: grid;
+  place-content: center;
+  gap: 20px;
+}
+.skeleton .history {
+  position: absolute;
+  font-size: 1rem;
+  color: #fff;
+  border-radius: 15px;
+  top: 50px;
+  /* display: none; */
+  flex-direction: column;
+  width: 100%;
+  height: 0%;
+  /* opacity: 0; */
+  background-color: #000;
+  overflow: auto;
+
+  transition: 300ms;
+}
+.skeleton .history.active {
+  padding: 15px;
+  display: block;
+  border: 1px solid;
+  border-color: transparent rgba(255, 255, 255, 0.5) rgba(255, 255, 255, 0.5)
+    rgba(255, 255, 255, 0.5);
+  height: 86%;
+}
+.skeleton .history .operations {
+  margin-top: 10px;
+}
+.skeleton .history .results {
+  font-size: 1.4rem;
+  opacity: 50%;
+  padding-bottom: 5px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.skeleton ul li {
+  display: flex;
+  gap: 10px;
+}
+.skeleton button {
+  background-color: #000000;
+  color: #fff;
+  font-size: 1.4rem;
+  width: 80px;
+  height: 50px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.skeleton ul:first-child li button {
+  color: aqua;
+}
+.skeleton ul li button:last-child {
+  color: red;
+}
+
+@media (max-width: 450px) {
+  .container {
+    width: 100%;
+    height: auto;
+  }
+  .skeleton ul li {
+    gap: 15px;
+  }
+  .skeleton button {
+    width: 40px;
+    height: 25px;
+    font-size: 0.7rem;
+  }
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DreaKalkulator</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="result" id="result"></div>
+      <div class="operation">Calculator</div>
+      <div class="down"></div>
+      <div class="skeleton">
+        <div class="history">
+          <p class="operations">History Result</p>
+          <!-- <p class="results">count</p> -->
+        </div>
+        <ul>
+          <li>
+            <button onclick="clearDisplay()">C</button>
+            <button>none</button>
+            <button onclick="deleteValue()" class="delete">⌫</button>
+            <button class="symbol">:</button>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <button class="number">7</button>
+            <button class="number">8</button>
+            <button class="number">9</button>
+            <button class="symbol">x</button>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <button class="number">4</button>
+            <button class="number">5</button>
+            <button class="number">6</button>
+            <button class="symbol">-</button>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <button class="number">1</button>
+            <button class="number">2</button>
+            <button class="number">3</button>
+            <button class="symbol">+</button>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <button class="number">00</button>
+            <button class="number">0</button>
+            <button class="number">,</button>
+            <button type="submit" class="submit" id="submit">=</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
