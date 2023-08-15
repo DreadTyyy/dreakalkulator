@@ -11,8 +11,9 @@ html {
   height: 100vh;
 }
 .container {
+  position: relative;
   width: 450px;
-  background-color: rgb(8, 8, 8);
+  background-color: rgb(10, 10, 10);
   height: 500px;
   /* box-shadow: 0 0 5px #fff; */
   border-radius: 15px;
@@ -39,7 +40,7 @@ ul {
 .down {
   position: absolute;
   left: 50%;
-  bottom: 71%;
+  top: 20%;
   z-index: 999;
   transform: translateX(-50%);
   background-color: #fff;
@@ -115,6 +116,11 @@ ul {
   .container {
     width: 100%;
     height: auto;
+    background-color: rgb(15, 15, 15);
+  }
+  .down {
+    top: 25%;
+    width: 60px;
   }
   .skeleton ul li {
     gap: 15px;
@@ -123,5 +129,11 @@ ul {
     width: 40px;
     height: 25px;
     font-size: 0.7rem;
+  }
+  .skeleton .history .operations {
+    font-size: 0.7rem;
+  }
+  .skeleton .history .results {
+    font-size: 1.2rem;
   }
 }
